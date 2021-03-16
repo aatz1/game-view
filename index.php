@@ -10,6 +10,14 @@
 <body>
     <div id="body">
         <h1>Find your GAME</h1>
+        <table class="list">
+            <tr><td>Image</td><td>Name</td><td>Adm</td></tr>
+            <tr><td>Image</td><td>Name</td><td>Adm</td></tr>
+            <tr><td>Image</td><td>Name</td><td>Adm</td></tr>
+            <tr><td>Image</td><td>Name</td><td>Adm</td></tr>
+            <tr><td>Image</td><td>Name</td><td>Adm</td></tr>
+            <tr><td>Image</td><td>Name</td><td>Adm</td></tr>
+        </table>
     </div>
 </body>
 </html>

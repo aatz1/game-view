@@ -8,16 +8,30 @@
     <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
+<?php 
+    require_once "utils/base.php"
+?>
     <div id="body">
         <h1>GAMES</h1>
         <table class="list">
-            <tr><td>Image</td><td>Name</td><td>Adm</td></tr>
-            <tr><td>Image</td><td>Name</td><td>Adm</td></tr>
-            <tr><td>Image</td><td>Name</td><td>Adm</td></tr>
-            <tr><td>Image</td><td>Name</td><td>Adm</td></tr>
-            <tr><td>Image</td><td>Name</td><td>Adm</td></tr>
-            <tr><td>Image</td><td>Name</td><td>Adm</td></tr>
+            <?php 
+                $search = $base->query("select * from jogos");
+                if(!$search) {
+                    echo "<p>Search failed</p>";
+                } else {
+                    if($search->num_rows == 0) {
+                        echo "<tr>No registry found</tr>";
+                    } else {
+                        while($reg=$search->fetch_object()) {
+                            echo "<tr><td>$reg->capa<td>$reg->nome";
+                            echo "<td>Adm"; 
+                        }
+                    }
+                }
+            
+            ?>
         </table>
     </div>
+    <?php $base->close(); ?>
 </body>
 </html>

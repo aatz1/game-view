@@ -42,3 +42,7 @@ table.list td:nth-child(1) {
 table.list td:nth-child(3) {
     width: 90px;
 }
+
+.mini {
+    width: 50px;
+}

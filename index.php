@@ -23,7 +23,8 @@
                         echo "<tr>No registry found</tr>";
                     } else {
                         while($reg=$search->fetch_object()) {
-                            echo "<tr><td>$reg->capa<td>$reg->nome";
+                            $imagepath = "images/$reg->capa";
+                            echo "<tr><td><img src='$imagepath' class='mini'> <td>$reg->nome";
                             echo "<td>Adm"; 
                         }
                     }
